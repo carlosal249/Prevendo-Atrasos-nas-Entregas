@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Prevendo atrasos nas entregas</title>
+		<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+<link rel="stylesheet" href="../static/main.css">
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    </head>
+    <body>
+    <div class="container-fluid">
+        <div class="row no-gutter">
+          
+          <div class="d-none d-md-flex col-md-4 col-lg-6" id="caixa">
+            <img src="{{url_for('static', filename='entrega.jpg')}}" id='imagem'/>
+          </div>
+          <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9 col-lg-8 mx-auto">
+                    <h3 class="login-heading mb-4">Previsao de Atraso nas entregas</h3>
+
+                      <form method="post" action="#">
+                      <div class="form-group">
+                        <label for="data-entrega">Data da compra</label>
+                        <input type="text" class="form-control" id="data-entrega" aria-describedby="data-entrega" placeholder="AAAA/MM/DD" name="data-entrega">
+                      </div>
+                      <div class="form-group">
+                        <label for="preco_frete">Preço do frete</label>
+                        <input type="text" class="form-control" id="preco_frete" placeholder="7.50" name="preco_frete">
+                      </div>
+                      <div class="form-group">
+                        <label for="preco_total">Preço Total pago</label>
+                        <input type="text" class="form-control" id="preco_total" placeholder="19.50" name="preco_total">
+                      </div>
+                      <div class="form-group form-check">
+                        <div class="text-center">
+                        <a class="small" href="#">Quer saber + sobre o projeto ?</a></div>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id='submit-area' value="submit" id="prever">Prever</button>
+                    </form>
+                  </div>
+                    {% if previsao == 0 %}
+                    <p id='resultado'>O modelo prevê  que sua entrega nao ira atrasar!</p>
+                    {% endif %}
+                    {% if previsao == 1 %}
+                    <p id='resultado'>O modelo prevê  que sua entrega ira atrasar!, com{{previsao_proba}}% de certeza</p>
+                    {% endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	</body>
+</html>

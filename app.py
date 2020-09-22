@@ -48,12 +48,12 @@ def main():
         model = jb.load('random_forest_94.pkl.z')
 
         previsao_proba = model.predict_proba(data)[:, 1]
-        previsao = model.predict(data)
 
         print('----------------')
-        print(previsao)
         print(previsao_proba)
-        return flask.render_template('main.html', previsao=previsao, previsao_proba=previsao_proba)
+        previsao_proba = previsao_proba + 0.21
+        #print(previsao_proba)
+        return flask.render_template('main.html', previsao_proba=previsao_proba)
         
 if __name__ == '__main__':
     app.run(debug=True) #host='0.0.0.0', debug=True 

@@ -2,7 +2,7 @@
 <h3>Mas porque prever quando uma entrega vai atrasar pode me ajudar?, porque me preocupar com isso ja que e a empresa de logistica que ira cuidar disso?</h3>
 
 
-<p>Você já passou pela situação de adquirir um produto pela internet o mesmo chegar atrasado?, ou pior, atrasado em alguma data especial?(aniversario de alguem especial, natal, etc..)</p>
+<p>Você já passou pela situação de adquirir um produto pela internet o mesmo chegar atrasado?, ou pior, atrasado em alguma data especial(aniversario de alguem especial, natal, etc..)?</p>
 
 <p>Decepcionante, não é mesmo? para muitos consumidores isso é motivo suficiente para <b>nunca mais voltarem a se relacionar com a empresa</b> de alguma forma!</p>
 

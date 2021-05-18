@@ -51,7 +51,7 @@ def main():
 
         print('----------------')
         print(previsao_proba)
-        previsao_proba = previsao_proba + 0.21
+        
         #print(previsao_proba)
         return flask.render_template('main.html', previsao_proba=previsao_proba)
         
